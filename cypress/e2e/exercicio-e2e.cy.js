@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
+context('Exercicio - Testes End-to-end - Fluxo de pedido', () => { 
     /*  Como cliente 
         Quero acessar a Loja EBAC 
         Para fazer um pedido de 4 produtos 
@@ -17,11 +17,11 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
             cy.visit('produtos')
             cy.addProdutos('Abominable Hoodie', 'XL', 'Green')
             cy.visit('produtos')
-            cy.addProdutos('Atlas Fitness Tank', 'XL', 'Blue')
+            cy.addProdutos('Beaumont Summit Kit', 'XL', 'Yellow')
             cy.visit('produtos/page/2/')
-            cy.addProdutos('Autumn Pullie', 'XL', 'Purple')
+            cy.addProdutos('Hero Hoodie', 'XL', 'Green')
             cy.visit('produtos/page/2/')
-            cy.addProdutos('Caesar Warm-Up Pant', '32', 'Gray')
+            cy.addProdutos('Lando Gym Jacket', 'XL', 'Gray')
     
             cy.get('.dropdown-toggle > .mini-cart-items').should('contain', 4)
     
@@ -29,6 +29,6 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
             cy.get('.checkout-button').click()
             cy.get('#terms').click()
             cy.get('#place_order').click()
-            cy.get('.page-title').should('contain', 'Pedido recebido')
+            cy.get('.page-title').should('contain', 'PEDIDO RECEBIDO')
         });
     });
