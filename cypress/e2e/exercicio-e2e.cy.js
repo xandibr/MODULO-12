@@ -1,6 +1,6 @@
 context('Exercicio - Testes End-to-end - Fluxo de pedido', () => { 
     beforeEach(() => {
-        cy.intercept('POST', '**?wc-ajax=checkout').as('chechoutPOST')
+        cy.intercept('POST', '**?wc-ajax=checkout').as('checkoutPOST')
         cy.login()
     });
 
